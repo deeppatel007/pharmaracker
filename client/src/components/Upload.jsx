@@ -67,7 +67,7 @@ const Upload = () => {
                 </Button>
                 {
                     (errorupload != null) ? 
-                    <Alert msg={errorupload} /> : <div />
+                    <Alert msg={"Medicine Uploaded Successfully"} color={'success'}/> : <div />
                 }
             </Card>
         </div>

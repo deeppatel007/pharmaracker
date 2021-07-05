@@ -2,6 +2,7 @@ import { Form, Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { BsSearch } from 'react-icons/bs'
 import { useState } from 'react';
 import Output from './Output';
+import { medicinefinder } from '../service/service';
 import axios from 'axios';
 
 const url = 'http://localhost:5000/api';
@@ -48,12 +49,19 @@ const Search = () => {
         setClickdone(true)
         medicinefinder(medicinename)
     }
+    const clicksearchHandler = () => {
+        setClickdone(false);
+        setMedicinedata([]);
+    }
 
     return (
         <>
             {
                 clickdone ? 
-                <Output medicine={medicinedata} district={medicinename.district}/>
+                <div>
+                    <Output medicine={medicinedata} district={medicinename.district}/>
+                    <Button variant="success" onClick={clicksearchHandler} className="d-flex mx-auto">Back to Search</Button>
+                </div>
                 :
                 <Card style={{ display: 'flex', 
                 width: '35%',

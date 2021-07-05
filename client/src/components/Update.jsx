@@ -93,7 +93,7 @@ const Update = () => {
                 </Form>
                 {
                     (errorupdate != null) ? 
-                    <Alert msg={errorupdate} /> : <div />
+                    <Alert msg={"Medicine Updated Successfully"} color={'success'}/> : <div />
                 }
             </Card>
             <Card style={{ display: 'block', 
@@ -119,7 +119,7 @@ const Update = () => {
                 </Form>
                 {
                     (errordelete != null) ? 
-                    <Alert msg={errordelete} /> : <div />
+                    <Alert msg={"Medicine Deleted Successfully"} color={'success'}/> : <div />
                 }
             </Card>
         </div>

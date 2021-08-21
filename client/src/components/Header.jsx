@@ -23,9 +23,9 @@ const Header = () => {
         <Navbar style={{height: 50, background: 'black', marginTop: 15}} sticky="top">
             <Link to='/' className="mx-auto">
                 <Navbar.Brand>
-                    <GiMedicines className="mb-2" style={{color: '#5cb85c'}}/>
-                    <span style={{color:'#ffffff', fontWeight: 600}}>Pharma</span>
-                    <span style={{color:'#5cb85c', fontWeight: 600}}>Tracker</span>
+                    <GiMedicines className="mb-2" style={{color: 'white'}}/>
+                    <span style={{color:'white', fontWeight: 600}}>Pharma</span>
+                    <span style={{color:'white', fontWeight: 600}}>Tracker</span>
                     </Navbar.Brand>
             </Link>
             {

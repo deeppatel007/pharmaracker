@@ -4,7 +4,7 @@ import {FaClinicMedical} from 'react-icons/fa';
 import axios from 'axios';
 import Alert from './Alert';
 
-const url = 'http://localhost:5000/api';
+const url = 'http://localhost:2000/api';
 
 const Output = (props) => {
     
@@ -63,7 +63,7 @@ const Output = (props) => {
                     {
                         userdata.map(user => (
                             <Col className = "mb-3">
-                                <Card border="success" style = {{backgroundColor: 'rgba(255,255,255, 0.15)', color: '#ffffff', borderWidth: '2px'}}>
+                                <Card border="black" style = {{backgroundColor: 'rgba(255,255,255, 0.15)', color: '#ffffff', borderWidth: '2px'}}>
                                     <Card.Body> 
                                         <Card.Title style={{textTransform: 'uppercase'}}><FaClinicMedical className="mb-2"/> {user[0].shopname}</Card.Title>
                                         <Card.Text>

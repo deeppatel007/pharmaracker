@@ -18,8 +18,7 @@ app.use(cors());
 app.use('/api',router);
 
 
-const URL = `mongodb+srv://${username}:${password}@cluster0.vg7by.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
-
+const URL = `mongodb://${username}:${password}@pharmacy-shard-00-00.t15sn.mongodb.net:27017,pharmacy-shard-00-01.t15sn.mongodb.net:27017,pharmacy-shard-00-02.t15sn.mongodb.net:27017/PHARMACY?ssl=true&replicaSet=atlas-2y4237-shard-0&authSource=admin&retryWrites=true&w=majority`
 db(URL);
 
 app.listen(5000,() => {

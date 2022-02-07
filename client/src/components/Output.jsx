@@ -1,4 +1,4 @@
-import { Col, Row, Card } from 'react-bootstrap';
+import { Col, Row, Card,Grid } from 'react-bootstrap';
 import { useEffect, useState} from 'react';
 import {FaClinicMedical} from 'react-icons/fa';
 import axios from 'axios';
@@ -59,7 +59,7 @@ const Output = (props) => {
                     <Alert msg={"Medicine not found in your district"} color={'warning'}/>
                 </div>
                 :
-                <Row xs={1} md={2} className="g-4" style={{margin: '3% 3%'}}>
+                <Grid container spacing={2}>
                     {
                         userdata.map(user => (
                             <Col className = "mb-3">
@@ -85,7 +85,7 @@ const Output = (props) => {
                             </Col>
                         ))
                     }
-                </Row>
+                </Grid>
             }
             </div>
             :
